@@ -1,8 +1,8 @@
 module.exports = {
-    method: 'DELETE',
-    path: '/employee/remove/:id',
+    method: 'POST',
+    path: '/task',
     options: {
-        handler: require('../handlers/RemoveEmp'),
+        handler: require('../handlers/AddTask'),
         tags: ['api'], // ADD THIS TAG
        //validate: require('../validations/AddEmp')
     }
