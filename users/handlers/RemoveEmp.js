@@ -3,9 +3,8 @@ const Employee = require('../schemas/employeeSchema')
 
 try{
     module.exports = async (request, h) => {
-        let res = request.params ;
       
-        const removeEmployee = await Employee.findByIdAndRemove({id:res.id});
+        const removeEmployee = await Employee.findById({_id:request.params._id})
         //const createUser = await User.find(data)
         return {
             statuscode: 200,
